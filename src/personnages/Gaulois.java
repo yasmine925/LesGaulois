@@ -20,7 +20,7 @@ public class Gaulois {
 	}
 
 	private String prendreParole() {
-		return "Le gaulois " Z:\ILU1\TPs\workspace;
+		return "Le gaulois " + nom + " : ";
 	}
-	}
+	
 }
