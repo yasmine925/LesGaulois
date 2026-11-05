@@ -5,6 +5,7 @@ import java.io.ObjectInputStream.GetField;
 public class Romain {
 	private String nom;
 	private int force;
+	private String texte;
 
 	public Romain(String nom, int force) {
 		this.nom = nom;
@@ -32,6 +33,8 @@ public class Romain {
 				}else {
 					parler("Aïe");
 				}
+				
 		
 	}
+	
 }

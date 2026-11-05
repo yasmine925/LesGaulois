@@ -1,9 +1,10 @@
 package personnages;
-
+import village_gaulois.Village;
 public class Gaulois {
 	private String nom;
 	private int force;
 	private int effetPotion = 1;
+	private Village village;
 
 	public Gaulois(String nom, int force) {
 		this.nom = nom;
@@ -19,7 +20,7 @@ public class Gaulois {
 		System.out.println(prendreParole() + "\"" + texte + "\"");
 		
 	}
-
+	
 	private String prendreParole() {
 		return "Le Gaulois " + nom + " : ";
 	}
@@ -30,7 +31,7 @@ public class Gaulois {
 
 	@Override
 	public String toString() {
-		return "Gaulois [nom=" + nom + ", force=" + force + "]";
+		return nom;
 	}	
 	public void frapper(Romain romain) {
 		System.out.println(nom + " envoie un grand coup dans la mâchoire de "+ romain.getNom());
@@ -43,5 +44,26 @@ public class Gaulois {
 	public void boirePotion(int forcePotion) {
 		effetPotion = forcePotion;
 	}
+	public Village getVillage() {
+		return village;
+	}
+	
+	public void setVillage(Village village) {
+		this.village = village;
+		
+	}
+	public void sePresenter() {
+		if (village != null && village.getChef() == this) {
+			parler("Bonjour, je m'appelle " + nom + ". je suis le chef du village : " + village.getNom() + ".");
+		}else if (village != null) {
+			parler("Bonjour, je m'appelle " + nom + " j'habite dans le village:" + village.getNom() + ".");
+		}else {
+			parler("Bonjour, je m'appelle " + nom + ". je voyage de villages en villages. ");
+		}
+		
+		
+		
+	}
+
 }
 

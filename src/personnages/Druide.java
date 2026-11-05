@@ -7,6 +7,11 @@ public class Druide {
 	private int force;
 	private Chaudron chaudron = new Chaudron ();
 	
+	public Druide(String nom, int force) {
+	    this.nom = nom;
+	    this.force = force;
+	}
+	
 	
 	public void parler(String texte) {
 		System.out.println(prendreParole() + "\"" + texte + "\"");	
@@ -26,7 +31,7 @@ public class Druide {
 	public void booster(Gaulois gaulois) {
 		if(chaudron.resterPotion()) {
 			String nomGaulois = gaulois.getNom();
-			if(nomGaulois.equals("Obélix")) {
+			if(nomGaulois !=null && nomGaulois.equals("Obélix")) {
 				parler("Non, Obélix Non !... Et tu le sais très bien !");
 				
 			}else {
@@ -43,9 +48,6 @@ public class Druide {
 	public String getNom() {
 		return nom;
 	}
-	public Druide(String nom, int force) {
-	    this.nom = nom;
-	    this.force = force;
-	}
+	
 }
 	
