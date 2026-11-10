@@ -42,7 +42,7 @@ public class Village {
 		village.ajouterVillageois(asterix); 
 		Gaulois gaulois = village.trouverVillageois(1);
 		 System.out.println(gaulois);
-		gaulois = village.trouverVillageois(2);
+		 gaulois = village.trouverVillageois(2);
 		 System.out.println(gaulois);
 		 village.afficherVillageois();
 		 Gaulois obelix = new Gaulois("Obélix", 25);

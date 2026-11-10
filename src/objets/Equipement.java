@@ -11,4 +11,7 @@ private String nom;
 	public String toString() {
 		return nom;
 	}
+	public String getNom() {
+	    return nom;
+	}
 }
